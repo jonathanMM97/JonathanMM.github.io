@@ -82,11 +82,13 @@ a:nth-child(3){
     justify-content: center;
     align-items: center;
     background: transparent;
+    position: relative;
     border: .2rem solid var(--main-color);
     border-radius: 50%;
     font-size: 2rem;
     color:rgb(75, 179, 5);
     margin: 20px;
+    margin-left: 39px;
     transition: .3s;
 }
 
