@@ -10,116 +10,96 @@
 
 <body>
 
-  <header class="header">
-    <a href="#" class="logo">Jonathan</a>
-
-    <i class="bx bx-menu" id="menu-icon"></i>
-
-    <nav class="navbar">
+  <header>
+    <img
+      src="/images/playaChiclana.png"
+      alt=""
+      class="backdrop"
+    />
+  </header>
+  <div class="intro">
+    <img
+      src="/images/joni.jpg"
+      alt=""
+      class="avatar"
+    />
+    <div class="title-wrapper">
+      <div class="title">
+        <h1>Jonathan Muñoz Morales</h1>
+        <a
+          href="https://www.instagram.com/jonimunozz97/?igshid=MzNlNGNkZWQ4Mg%3D%3D"
+          rel="noreferrer noopener"
+          target="_blank"
+          >@jonimunnozz97</a
+        >
+      </div>
+      <nav class="navbar">
         <a href="#home" class="active">Home</a>
         <a href="#portfolio">Portfolio</a>
         <a href="#contact">Contact</a>
         <div class="animation start-home"></div>
     </nav>
-  </header>
-
-  <section class="home" id="home">
-    <div class="home-content">
-      <h3>Hi, I'm</h3>
-      <h1>Jonathan Muñoz</h1>
-      <h3>And I'm a <span>Software Engineer</span></h3>
-      <p>Currently a fourth year student of software engineering degree at the University of Cadiz. Besides programming, I love to play soccer and hang out with friends to talk about whatever, besides traveling of course.</p>
     </div>
+  </div>
+  <main>
+    <ul>
+      <li class="skeleton">
+        <div class="skeleton__block">
+          <img
+            src="/images/joni.jpg"
+            alt=""
+          />
+        </div>
+        <div class="skeleton__block">
+          <h1>Hi, I'm Jonathan Muñoz Morales</h1>
+          <h1>And I'm a <span>Software Engineer</span> </h1>
+        </div>
+        <div class="skeleton__block">
+          Currently a fourth year student of software engineering degree at the University of Cadiz. Besides programming, I love to play soccer and hang out with friends to talk about whatever, besides traveling of course.
+        </div>
+      </li>
+      <li class="skeleton">
+        <div class="skeleton__block">
+          <img
+            src="/images/appESIVANA.png"
+            alt=""
+          />
+        </div>
+        <div class="skeleton__block"></div>
+        <div class="skeleton__block"></div>
+      </li>
+      <li class="skeleton">
+        <div class="skeleton__block"></div>
+        <div class="skeleton__block"></div>
+        <div class="skeleton__block"></div>
+      </li>
+      <li class="skeleton">
+        <div class="skeleton__block"></div>
+        <div class="skeleton__block"></div>
+        <div class="skeleton__block"></div>
+      </li>
+      <li class="skeleton">
+        <div class="skeleton__block"></div>
+        <div class="skeleton__block"></div>
+        <div class="skeleton__block"></div>
+      </li>
+    </ul>
 
-    <div class="perfil-img">
-      <img src="images/joni.jpg" width="300" height="300">
-    </div>
-  </section>
+    <section class="Contact" id="contact">
 
-  <section class="Portfolio" id="portfolio">
-
-    <h2>Portfolio</h2>
-    <p>An application developed at the university that I look it to a level beyond what was asked for in the proyect, of which I feel very proud because I learned a lot and enjoyed it even more.</p>
-
-      <div class="app">
-        <img src="images/appESIVANA.png" width="500" height="380">
-      </div>
-
-    <div class="portfolio-items">
+      <h2>Contact</h2>
   
-      <div class="portfolio-img">
-        <img class="java-img" src="images/java.png">
-        <div class="portfolio-content">
-          <h4>Java 17</h4>
-          <p>The application is supported for version 17.</p>
-        </div>
+      <div class="contact-box">
+        <form>
+          <input type="text" class="input-field" placeholder="your Name">
+          <input type="email" class="input-field" placeholder="your Email">
+          <input type="text" class="input-field" placeholder="Subject">
+          <textarea type="text" class="input-field textarea-field" placeholder="your Message"></textarea>
+          <button type="button" class="btn">Send Message</button>
+        </form>
       </div>
-  
-      <div class="portfolio-img">
-        <img class="spring-img" src="images/spring.png">
-        <div class="portfolio-content">
-          <h4>Spring</h4>
-          <p>Spring boot was used to implement the application, a technology currently used by many proffesionals.</p>
-        </div>
-      </div>
-  
-      <div class="portfolio-img">
-        <img class="junit-img" src="images/junit.png">
-        <div class="portfolio-content">
-          <h4>Junit</h4>
-          <p>Junit used for testing in the core layer of the application.</p>
-        </div>
-      </div>
-        
-      <div class="portfolio-img">
-        <img class="maven-img" src="images/maven.png">
-        <div class="portfolio-content">
-          <h4>Maven</h4>
-          <p>Maven was used for the construction of the proyect.</p>
-        </div>
-      </div>
-        
-      <div class="portfolio-img">
-        <img class="mariadb-img" src="images/mariadb.png">
-        <div class="portfolio-content">
-          <h4>Mariadb</h4>
-          <p>Mariadb was used for in-memory persistence.</p>
-        </div>
-      </div>
-  
-      <div class="portfolio-img">
-        <img class="swagger-img" src="images/swagger.png">
-        <div class="portfolio-content">
-          <h4>Swagger</h4>
-          <p>Swagger was used to documment the created api rest.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <section class="Contact" id="contact">
-
-    <h2>Contact</h2>
-
-    <div class="contact-box">
-      <form>
-        <input type="text" class="input-field" placeholder="your Name">
-        <input type="email" class="input-field" placeholder="your Email">
-        <input type="text" class="input-field" placeholder="Subject">
-        <textarea type="text" class="input-field textarea-field" placeholder="your Message"></textarea>
-        <button type="button" class="btn">Send Message</button>
-      </form>
-    </div>
-  </section>
-
-  <footer class="site-footer">
-    <a href="#" class="logo">Jonathan</a>
-    <div class="footer-container">
-        <a href="#"><i class='bx bxl-facebook'></i></a>
-        <a href="#"><i class='bx bxl-instagram' ></i></a>
-        <a href="#"><i class='bx bxl-linkedin' ></i></a>
-        <a href="#"><i class='bx bxl-twitter' ></i></a>
-    </div>
-  </footer>
 </body>
 </html>
