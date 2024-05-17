@@ -1,0 +1,74 @@
+<!-- TuComponente.vue -->
+<template>
+  <main class="landing"></main>
+</template>
+
+<script setup lang="ts">
+import * as THREE from 'three'
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
+import { ref, onMounted } from 'vue'
+
+const loader = new GLTFLoader();
+const scene = new THREE.Scene();
+const positionCuadro = ref(new THREE.Vector3(0, 0, 0));
+scene.background = new THREE.Color(0x678380);
+
+let camera: THREE.PerspectiveCamera;
+let renderer: THREE.WebGLRenderer;
+let controls: OrbitControls;
+
+onMounted(() => {
+  camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
+  camera.position.set(1.75, 1.7, -0.7);
+
+  renderer = new THREE.WebGLRenderer();
+  renderer.shadowMap.enabled = true;
+  renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  document.querySelector('.landing')?.appendChild(renderer.domElement);
+
+  controls = new OrbitControls(camera, renderer.domElement);
+
+  loader.load(
+    new URL('public/media/room.glb', import.meta.url).href,
+    (gltf) => {
+      console.log(gltf);
+      gltf.scene.children[0].intensity = 10;
+      gltf.scene.children[112].intensity = 60;
+      scene.add(gltf.scene);
+      renderer.render(scene, camera);
+    },
+    undefined,
+    (error) => {
+      console.error('Error loading GLTF model', error);
+    }
+  );
+
+  camera.lookAt(-40, 1, 1);
+
+  const animate = () => {
+    requestAnimationFrame(animate);
+    renderer.render(scene, camera);
+  };
+
+  animate();
+
+  window.addEventListener('resize', onWindowResize);
+});
+
+const onWindowResize = () => {
+  if (camera && renderer) {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+  }
+};
+</script>
+
+<style scoped>
+.landing {
+  max-width: 1920px;
+  height: 100vh;
+}
+</style>
