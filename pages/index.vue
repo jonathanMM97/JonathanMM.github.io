@@ -10,7 +10,6 @@ import { ref, onMounted } from 'vue'
 
 const loader = new GLTFLoader();
 const scene = new THREE.Scene();
-const positionCuadro = ref(new THREE.Vector3(0, 0, 0));
 const landingLoading = ref(null);
 scene.background = new THREE.Color(0x678380);
 
