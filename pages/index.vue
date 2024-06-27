@@ -18,8 +18,8 @@ let camera: THREE.PerspectiveCamera;
 let renderer: THREE.WebGLRenderer;
 
 onMounted(() => {
-  camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
-  camera.position.set(1.75, 1.7, -0.7);
+  camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.3, 1000);
+  camera.position.set(1.7, 1.1, -0.6);
 
   renderer = new THREE.WebGLRenderer();
   renderer.shadowMap.enabled = true;
