@@ -1,17 +1,18 @@
 <!-- TuComponente.vue -->
 <template>
-  <main class="landing"></main>
+  <main ref="landingLoading" class="landing"></main>
 </template>
 
 <script setup lang="ts">
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { ref, onMounted } from 'vue'
 
 const loader = new GLTFLoader();
 const scene = new THREE.Scene();
 const positionCuadro = ref(new THREE.Vector3(0, 0, 0));
+const landingLoading = ref(null);
 scene.background = new THREE.Color(0x678380);
 
 let camera: THREE.PerspectiveCamera;
@@ -26,7 +27,7 @@ onMounted(() => {
   renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = THREE.PCFSoftShadowMap;
   renderer.setSize(window.innerWidth, window.innerHeight);
-  document.querySelector('.landing')?.appendChild(renderer.domElement);
+  landingLoading.value?.appendChild(renderer.domElement);
 
   controls = new OrbitControls(camera, renderer.domElement);
 
