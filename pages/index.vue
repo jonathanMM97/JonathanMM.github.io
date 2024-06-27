@@ -5,7 +5,6 @@
 
 <script setup lang="ts">
 import * as THREE from 'three'
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { ref, onMounted } from 'vue'
 
@@ -17,7 +16,6 @@ scene.background = new THREE.Color(0x678380);
 
 let camera: THREE.PerspectiveCamera;
 let renderer: THREE.WebGLRenderer;
-let controls: OrbitControls;
 
 onMounted(() => {
   camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -28,8 +26,6 @@ onMounted(() => {
   renderer.shadowMap.type = THREE.PCFSoftShadowMap;
   renderer.setSize(window.innerWidth, window.innerHeight);
   landingLoading.value?.appendChild(renderer.domElement);
-
-  controls = new OrbitControls(camera, renderer.domElement);
 
   loader.load(
     new URL('public/media/room.glb', import.meta.url).href,
