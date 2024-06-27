@@ -18,7 +18,7 @@ let renderer: THREE.WebGLRenderer;
 
 onMounted(() => {
   camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.3, 1000);
-  camera.position.set(1.7, 1.1, -0.6);
+  camera.position.set(1.7, 1.3, -0.6);
 
   renderer = new THREE.WebGLRenderer();
   renderer.shadowMap.enabled = true;
@@ -41,7 +41,7 @@ onMounted(() => {
     }
   );
 
-  camera.lookAt(-40, 1, 1);
+  camera.lookAt(-40, -10, 1);
 
   const animate = () => {
     requestAnimationFrame(animate);
