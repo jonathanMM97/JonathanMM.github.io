@@ -1,5 +1,12 @@
 <template>
-  <NuxtLayout>
+  <div class="layout">
     <NuxtPage />
-  </NuxtLayout>
+  </div>
 </template>
+
+<style scoped>
+.layout {
+  display: flex;
+  overflow: hidden;
+}
+</style>
