@@ -1,6 +1,7 @@
-<!-- TuComponente.vue -->
 <template>
-  <main ref="landingLoading" class="landing"></main>
+  <main id="main">
+    <div ref="landingLoading" class="landing" />
+  </main>
 </template>
 
 <script setup lang="ts">
@@ -18,7 +19,7 @@ let renderer: THREE.WebGLRenderer;
 
 onMounted(() => {
   camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.3, 1000);
-  camera.position.set(1.9, 1.0, -0.6);
+  camera.position.set(1.9, 1.05, -0.6);
 
   renderer = new THREE.WebGLRenderer();
   renderer.shadowMap.enabled = true;
@@ -64,8 +65,16 @@ const onWindowResize = () => {
 </script>
 
 <style scoped>
+#main {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #262626;
+  color: white;
+}
 .landing {
-  max-width: 1920px;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
+  mask-image: linear-gradient(to bottom, black 80%, transparent);
 }
 </style>
