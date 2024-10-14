@@ -1,7 +1,7 @@
 <template>
-  <main>
+  <main class="jmm-flex jmm-flex-col jmm-overflow-hidden">
     <Header />
-    <Room class="jmm-object jmm-overflow-hidden" :width="roomWidth" :height="roomHeight"  />
+    <Room class="jmm-object" :width="roomWidth" :height="roomHeight"  />
     <Content />
   </main>
 </template>
@@ -15,5 +15,4 @@ const previousSize = ref(0)
 watch(roomWidth, () => {
   previousSize.value = roomWidth.value - previousSize.value
 })
-
 </script>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import * as THREE from 'three'
-import { useWindowSize } from '@vueuse/core'
+
 const props = defineProps({
   width: {
     type: Number,
@@ -13,9 +13,7 @@ const props = defineProps({
 })
 
 const landingLoading = ref<HTMLElement | null>(null)
-const { width } = useWindowSize()
 
-let r: Function | null = null
 let cam: THREE.PerspectiveCamera
 let rend: THREE.WebGLRenderer
 let obj: THREE.Object3D
