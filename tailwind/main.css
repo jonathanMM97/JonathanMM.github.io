@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .jmm-no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .jmm-no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .jmm-mask-gradient-bottom {
+    mask-image: linear-gradient(to bottom, black 80%, transparent);
+  }
+}
