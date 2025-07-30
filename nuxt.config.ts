@@ -2,31 +2,29 @@
 export default defineNuxtConfig({
   app: {
     head: {
-      title: 'Jonathan Portfolio',
+      title: 'Jonathan Creative Developer',
       htmlAttrs: {
         lang: 'en'
       },
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      ],
       meta: [
-        { name: 'description', content: "TODO: write a description" }
+        { name: 'description', content: "Welcome to my digital playground — where code meets creativity. As a Creative Developer, I blend interactive design, animation, and front-end development to craft immersive web experiences that not only look beautiful but feel alive. From experimental interfaces to storytelling-driven visuals, I bring ideas to life through a mix of technology and imagination." }
       ]
     },
     baseURL: process.env.BASE_URL ?? '/'
   },
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/seo'],
   components: [
     {
       path: '~/components',
       pathPrefix: false
     }
   ],
+  site: {
+    url: 'https://www.jonathanmm.com/',
+    name: 'Jonathan Creative Developer',
+  },
   devtools: { enabled: true },
-  css: [
-    '~/tailwind/main.css',
-    '~/assets/css/reset.css'
-  ],
-  postcss: {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
-    },
-  }
 })
