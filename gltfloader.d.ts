@@ -5,6 +5,6 @@ declare module 'three/examples/jsm/loaders/GLTFLoader' {
       onLoad: (gltf: any) => void,
       onProgress?: (event: ProgressEvent) => void,
       onError?: (event: ErrorEvent) => void
-    ): void;
+    ): void
   }
 }

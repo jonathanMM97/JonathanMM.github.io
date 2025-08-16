@@ -1,0 +1,13 @@
+{
+  "about-me": {
+    "content": "<p><strong>Dos años conbinando código y creatividad</strong>. ¡Hola!, Soy <strong>Jonathan</strong>, un desarrollador creativo de 27 años de <strong>Chiclana de la Frontera</strong>. Me especializo en el desarrollo front-end, donde combino la narración visual con un código limpio y receptivo. Me apasiona crear experiencias digitales intuitivas y atractivas que no solo tengan un aspecto fantástico, sino que también sean muy agradables de usar.</p>"
+  },
+  "header": {
+    "project": "Proyectos",
+    "about-me": "Sobre mi",
+    "studies": "Formación",
+    "home": "Inicio",
+    "contact": "Contacto",
+    "lang": "ES"
+  }
+}
