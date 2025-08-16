@@ -1,18 +1,11 @@
 <template>
-  <div class="flex flex-col justify-center items-center">
-    <UseImage class="size-[200px] rounded-full" :src="profileImg" />
+  <div class="flex flex-col md:flex-row justify-center gap-8 items-center text-alabasterWhite">
+    <UseImage class="max-h-[300px] lg:h-[500px]" :src="profileImg" alt="profile" />
+    <div class="font-inter md:w-[600px]" v-html="$t('about-me.content')" />
   </div>
-  <p class="font-inter">
-    <strong class="font-bold">Two years of bringing code and creativity together</strong>. Hi! I'm
-    <strong class="font-bold">Jonathan</strong>, 27-year-old creative developer from
-    <strong class="font-bold"> Chiclana de la Frontera</strong>. I specialize in front-end
-    development, where I combine visual storytelling with clean, responsive code. I'm passionate
-    about building intuitive, engaging digital experiences that not only look great but feel great
-    to use.
-  </p>
 </template>
 
 <script setup lang="ts">
 import { UseImage } from '@vueuse/components'
-import profileImg from '~/assets/profile.webp'
+import profileImg from '~/assets/bg-about-me.webp'
 </script>

@@ -8,11 +8,11 @@ const config: Config = {
         roboto: ['Roboto', 'Inter', 'sans-serif']
       },
       colors: {
-        primary: '#2E3532',
-        secondary: '#E0E2DB',
-        red: '#8B2635',
-        gray: '#D2D4C8',
-        green: '#D3EFBD'
+        onyx: '#2E3532',
+        alabasterWhite: '#E0E2DB',
+        claretRed: '#8B2635',
+        timberwolfGray: '#D2D4C8',
+        teaGreen: '#D3EFBD'
       }
     }
   }

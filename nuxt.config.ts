@@ -1,3 +1,5 @@
+import { env } from 'node:process'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   app: {
@@ -17,7 +19,21 @@ export default defineNuxtConfig({
     },
     baseURL: process.env.BASE_URL ?? '/'
   },
-  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/seo'],
+  modules: ['@nuxtjs/tailwindcss', 'nuxt-svgo', '@nuxtjs/seo', '@nuxtjs/i18n'],
+  i18n: {
+    defaultLocale: 'es',
+    locales: [
+      { code: 'en', name: 'English', file: 'en.json' },
+      { code: 'es', name: 'Español', file: 'es.json' }
+    ],
+    compilation: {
+      strictMessage: false
+    },
+    bundle: {
+      optimizeTranslationDirective: false
+    },
+    vueI18n: '../i18n/config.ts'
+  },
   components: [
     {
       path: '~/app/components',
