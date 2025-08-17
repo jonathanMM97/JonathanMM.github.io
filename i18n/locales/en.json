@@ -9,5 +9,15 @@
     "project": "Projects",
     "contact": "Contact",
     "lang": "EN"
+  },
+  "hero": {
+    "name": "I\'m Jonathan",
+    "job": "I'm Frontend Developer",
+    "contact": "Contact",
+    "yearsExperience": "+2",
+    "experience": "Years of experience",
+    "numProjects": "+15",
+    "projects": "Projects",
+    "expertise": "My expertise"
   }
 }
