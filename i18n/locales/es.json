@@ -9,5 +9,15 @@
     "home": "Inicio",
     "contact": "Contacto",
     "lang": "ES"
+  },
+  "hero": {
+    "name": "Jonathan",
+    "job": "Soy Frontend Developer",
+    "contact": "Contáctame",
+    "yearsExperience": "+2",
+    "experience": "Años de experiencia",
+    "numProjects": "+15",
+    "projects": "Proyectos",
+    "expertise": "Mi experiencia"
   }
 }
